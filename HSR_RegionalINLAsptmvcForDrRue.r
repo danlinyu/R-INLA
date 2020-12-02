@@ -36,6 +36,29 @@ cnct.soi.nb<-graph2nb(soi.graph(tri2nb(coordinates(cnctsp)), coordinates(cnctsp)
 
 nb2INLA("cnct.graph", cnct.soi.nb)
 
+# Read the graph to a graph object and examine if there are islands:
+
+g <- inla.read.graph('cnct.graph')
+
+# get the ids:
+ids <- list()
+if (length(g$cc$node) > 1) {
+	for (i in 2:length(g$cc$node)) {
+		ids[[i]] <- g$cc$node[[i]]
+	}
+}
+
+#the k-nearest neighbor:
+knn <- knearneigh(coordinates(cnctsp), k = 2)
+
+#get the neighbor list for each of the pairs in the graph:
+nblist <- knn$nn[unlist(ids),]
+
+#assign the region id to the nblist:
+row.names(nblist) <- unlist(ids)
+
+# Alter the graph file based on the nblist's results and get the new graph updated.
+
 cnct.adj <- paste(my.dir, "cnct.graph", sep = "")
 
 d = 0.01
@@ -159,15 +182,6 @@ fm.travletime.pc.besag <- lnGDP ~ -1  +
 				 hyper = list(prec=list(prior="pc.prec",
                               param=c(U.vcm,0.01),
                               initial=0)), diagonal = d)
-
-
-
-mod.cnct.intIV <- inla(fm.travletime,family="gaussian",data=cnct.inla.data, 
-                  control.predictor=list(compute=TRUE),
-				  control.fixed = list(prec.intercept = 1),
-                  control.compute=list(dic=TRUE,cpo=TRUE),
-				  control.inla=list(strategy="adaptive", int.strategy ="eb", cmin = 0), num.threads="4:1", verbose = FALSE)
-
 
 mod.cnct.intIV.1 <- inla(fm.travletime.1,family="gaussian",data=cnct.inla.data, 
                   control.predictor=list(compute=TRUE),

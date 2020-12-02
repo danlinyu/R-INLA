@@ -1,0 +1,1239 @@
+> mod.cnct.intIV.1 <- inla(fm.travletime.1,family="gaussian",data=cnct.inla.data,
++                   control.predictor=list(compute=TRUE),
++   control.fixed = list(prec.intercept = 1),
++                   control.compute=list(dic=TRUE,cpo=TRUE),
++   control.inla=list(strategy="adaptive", int.strategy ="eb", cmin = 0), num.threads="25:1", verbose = TRUE)
+        Read ntt 25 1 with max.threads 25
+        Found num.threads = 25:1 max_threads = 25
+
+        d666655028aabbc8423055862b76f164b333d4f1 - Sun Nov 29 13:43:31 2020 +0300
+Report bugs to <help@r-inla.org>
+Process file[/tmp/RtmpfbTuiz/file3467ae97ab3/Model.ini] threads[25] max.threads[25] blas_threads[1] nested[25:1]
+inla_build...
+        number of sections=[17]
+        parse section=[0] name=[INLA.libR] type=[LIBR]
+        inla_parse_libR...
+                section[INLA.libR]
+                        R_HOME=[/usr/lib/R]
+        parse section=[16] name=[INLA.Expert] type=[EXPERT]
+        inla_parse_expert...
+                section[INLA.Expert]
+                        disable.gaussian.check=[0]
+                        cpo.manual=[0]
+                        jp.file=[(null)]
+                        jp.model=[(null)]
+        parse section=[1] name=[INLA.Model] type=[PROBLEM]
+        inla_parse_problem...
+                name=[INLA.Model]
+                R-INLA version=[20.11.29]
+                R-INLA build date=[Sun Nov 29 02:12:08 PM +03 2020]
+                Build tag=[Version_20.11.29]
+                openmp.strategy=[default]
+                pardiso-library installed and working? = [yes]
+                smtp = [pardiso]
+                strategy = [pardiso]
+        store results in directory=[/tmp/RtmpfbTuiz/file3467ae97ab3/results.files]
+                output:
+                        cpo=[1]
+                        po=[0]
+                        dic=[1]
+                        kld=[1]
+                        mlik=[1]
+                        q=[0]
+                        graph=[0]
+                        gdensity=[0]
+                        hyperparameters=[1]
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+        parse section=[3] name=[Predictor] type=[PREDICTOR]
+        inla_parse_predictor ...
+                section=[Predictor]
+                dir=[predictor]
+                PRIOR->name=[loggamma]
+                hyperid=[53001|Predictor]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1, 1e-05]
+                initialise log_precision[12]
+                fixed=[1]
+                user.scale=[1]
+                vb.correct=[0]
+                n=[18280]
+                m=[0]
+                ndata=[18280]
+                compute=[1]
+                read offsets from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 1/18280  (idx,y) = (1, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 2/18280  (idx,y) = (2, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 3/18280  (idx,y) = (3, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 4/18280  (idx,y) = (4, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 5/18280  (idx,y) = (5, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 6/18280  (idx,y) = (6, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 7/18280  (idx,y) = (7, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 8/18280  (idx,y) = (8, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34639e46714] 9/18280  (idx,y) = (9, 0)
+                Aext=[(null)]
+                AextPrecision=[1e+08]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+        parse section=[2] name=[INLA.Data1] type=[DATA]
+        inla_parse_data [section 1]...
+                tag=[INLA.Data1]
+                family=[GAUSSIAN]
+                likelihood=[GAUSSIAN]
+                file->name=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346670a6ea5]
+                file->name=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34618886401]
+                file->name=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34629c77b64]
+                read n=[54840] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346670a6ea5]
+                mdata.nattributes = 0
+                        0/18280  (idx,a,y,d) = (0, 1, 8.90423, 1)
+                        1/18280  (idx,a,y,d) = (1, 1, 10.188, 1)
+                        2/18280  (idx,a,y,d) = (2, 1, 9.37263, 1)
+                        3/18280  (idx,a,y,d) = (3, 1, 9.36383, 1)
+                        4/18280  (idx,a,y,d) = (4, 1, 8.86926, 1)
+                        5/18280  (idx,a,y,d) = (5, 1, 9.72782, 1)
+                        6/18280  (idx,a,y,d) = (6, 1, 9.24619, 1)
+                        7/18280  (idx,a,y,d) = (7, 1, 9.31226, 1)
+                        8/18280  (idx,a,y,d) = (8, 1, 8.70101, 1)
+                        9/18280  (idx,a,y,d) = (9, 1, 9.12271, 1)
+                likelihood.variant=[0]
+                initialise log_precision[4]
+                fixed0=[0]
+                PRIOR0->name=[loggamma]
+                hyperid=[65001|INLA.Data1]
+                PRIOR0->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR0->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR0->PARAMETERS0=[1, 5e-05]
+                initialise log_precision offset[72.0873]
+                fixed1=[1]
+                PRIOR1->name=[none]
+                hyperid=[65002|INLA.Data1]
+                PRIOR1->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR1->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR1->PARAMETERS1=[]
+                Link model   [IDENTITY]
+                Link order   [-1]
+                Link variant [-1]
+                Link a       [1]
+                Link ntheta  [0]
+                mix.use[0]
+        parse section=[4] name=[county.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[county.id]
+                dir=[random.effect00000001]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|county.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[1]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465034cdf] 9/18280  (idx,y) = (9, 9)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34645e123b1]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34679e0b30c]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|county.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[5] name=[urbanization.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[urbanization.id]
+                dir=[random.effect00000002]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|urbanization.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461210b418] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 0/18280  (idx,y) = (0, 0.030303)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 1/18280  (idx,y) = (1, 0.697531)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 2/18280  (idx,y) = (2, 0.143498)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 3/18280  (idx,y) = (3, 0.38724)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 4/18280  (idx,y) = (4, 0.161716)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 5/18280  (idx,y) = (5, 0.4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 6/18280  (idx,y) = (6, 0.233933)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 7/18280  (idx,y) = (7, 0.146667)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 8/18280  (idx,y) = (8, 0.089087)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34662c808bf] 9/18280  (idx,y) = (9, 0.159681)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346186ded7e]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465d1bb725]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|urbanization.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[6] name=[laborPR.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[laborPR.id]
+                dir=[random.effect00000003]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|laborPR.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463d16b65a] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 0/18280  (idx,y) = (0, 0.411924)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 1/18280  (idx,y) = (1, 0.717809)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 2/18280  (idx,y) = (2, 0.502605)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 3/18280  (idx,y) = (3, 0.348772)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 4/18280  (idx,y) = (4, 0.441987)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 5/18280  (idx,y) = (5, 0.5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 6/18280  (idx,y) = (6, 0.454789)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 7/18280  (idx,y) = (7, 0.440827)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 8/18280  (idx,y) = (8, 0.432286)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462b385a46] 9/18280  (idx,y) = (9, 0.433864)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34659645c90]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461ce831a5]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|laborPR.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[7] name=[lnFAI.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[lnFAI.id]
+                dir=[random.effect00000004]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|lnFAI.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346161d7241] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 0/18280  (idx,y) = (0, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 1/18280  (idx,y) = (1, 9.63067)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 2/18280  (idx,y) = (2, 8.90924)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 3/18280  (idx,y) = (3, 8.76928)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 4/18280  (idx,y) = (4, 8.95832)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 5/18280  (idx,y) = (5, 9)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 6/18280  (idx,y) = (6, 8.95054)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 7/18280  (idx,y) = (7, 8.77918)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 8/18280  (idx,y) = (8, 7.70673)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346783ee081] 9/18280  (idx,y) = (9, 8.53107)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3467efeb9ac]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3467cc55473]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|lnFAI.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[8] name=[lnRevn.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[lnRevn.id]
+                dir=[random.effect00000005]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|lnRevn.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3468417a50] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 0/18280  (idx,y) = (0, 5.61401)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 1/18280  (idx,y) = (1, 7.6183)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 2/18280  (idx,y) = (2, 6.12271)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 3/18280  (idx,y) = (3, 6.03689)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 4/18280  (idx,y) = (4, 6.21514)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 5/18280  (idx,y) = (5, 9)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 6/18280  (idx,y) = (6, 6.09527)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 7/18280  (idx,y) = (7, 5.17105)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 8/18280  (idx,y) = (8, 5.09829)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34646ab8742] 9/18280  (idx,y) = (9, 6.2567)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34620c9de51]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3464bc20c8e]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|lnRevn.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[9] name=[lnExp.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[lnExp.id]
+                dir=[random.effect00000006]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|lnExp.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3461aaa915d] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 0/18280  (idx,y) = (0, 7.74546)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 1/18280  (idx,y) = (1, 8.33981)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 2/18280  (idx,y) = (2, 7.55833)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 3/18280  (idx,y) = (3, 7.48192)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 4/18280  (idx,y) = (4, 7.53976)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 5/18280  (idx,y) = (5, 9)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 6/18280  (idx,y) = (6, 7.50938)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 7/18280  (idx,y) = (7, 7.38634)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 8/18280  (idx,y) = (8, 7.15235)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34688f6bfb] 9/18280  (idx,y) = (9, 7.44017)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34672acac20]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346707302a6]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|lnExp.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[10] name=[lnDeposit.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[lnDeposit.id]
+                dir=[random.effect00000007]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|lnDeposit.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465c839838] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 0/18280  (idx,y) = (0, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 1/18280  (idx,y) = (1, 9.9385)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 2/18280  (idx,y) = (2, 9.12009)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 3/18280  (idx,y) = (3, 8.63352)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 4/18280  (idx,y) = (4, 8.85261)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 5/18280  (idx,y) = (5, 9.8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 6/18280  (idx,y) = (6, 8.6599)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 7/18280  (idx,y) = (7, 8.48424)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 8/18280  (idx,y) = (8, 8.74699)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346608143c4] 9/18280  (idx,y) = (9, 8.58328)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3467293da3e]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3464e708fac]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|lnDeposit.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[11] name=[lnStudSec.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[lnStudSec.id]
+                dir=[random.effect00000008]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|lnStudSec.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346419c0eb3] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 0/18280  (idx,y) = (0, 6.25528)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 1/18280  (idx,y) = (1, 6.18306)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 2/18280  (idx,y) = (2, 5.77794)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 3/18280  (idx,y) = (3, 6.21434)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 4/18280  (idx,y) = (4, 6.43794)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 5/18280  (idx,y) = (5, 5.5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 6/18280  (idx,y) = (6, 6.66041)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 7/18280  (idx,y) = (7, 6.4609)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 8/18280  (idx,y) = (8, 6.59225)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3463605e79c] 9/18280  (idx,y) = (9, 6.21357)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346237562c1]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file34678ef3142]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|lnStudSec.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[12] name=[lnPopDen.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[lnPopDen.id]
+                dir=[random.effect00000009]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|lnPopDen.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346375e718] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 0/18280  (idx,y) = (0, 1.67131)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 1/18280  (idx,y) = (1, 5.71225)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 2/18280  (idx,y) = (2, 5.25703)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 3/18280  (idx,y) = (3, 5.87983)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 4/18280  (idx,y) = (4, 4.99736)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 5/18280  (idx,y) = (5, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 6/18280  (idx,y) = (6, 5.83607)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 7/18280  (idx,y) = (7, 4.99452)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 8/18280  (idx,y) = (8, 6.02821)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462587b66d] 9/18280  (idx,y) = (9, 5.67778)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346491c71a3]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346f6a442c]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|lnPopDen.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[13] name=[Indstr.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[Indstr.id]
+                dir=[random.effect00000010]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|Indstr.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346772d48f0] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 0/18280  (idx,y) = (0, 0.127949)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 1/18280  (idx,y) = (1, 0.6545)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 2/18280  (idx,y) = (2, 0.383284)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 3/18280  (idx,y) = (3, 0.228297)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 4/18280  (idx,y) = (4, 0.37196)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 5/18280  (idx,y) = (5, 0.4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 6/18280  (idx,y) = (6, 0.499037)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 7/18280  (idx,y) = (7, 0.383761)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 8/18280  (idx,y) = (8, 0.372863)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462cc7ea6a] 9/18280  (idx,y) = (9, 0.509999)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346c488ee2]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462486701a]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|Indstr.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        parse section=[14] name=[TravelTime.id] type=[FFIELD]
+        inla_parse_ffield...
+                section=[TravelTime.id]
+                dir=[random.effect00000011]
+                model=[besag]
+                PRIOR->name=[pcprec]
+                hyperid=[8001|TravelTime.id]
+                PRIOR->from_theta=[function (x) <<NEWLINE>>exp(x)]
+                PRIOR->to_theta = [function (x) <<NEWLINE>>log(x)]
+                PRIOR->PARAMETERS=[1.6129 0.01]
+                vb.correct=[-1]
+                correct=[-1]
+                constr=[0]
+                diagonal=[0.01]
+                id.names=<not present>
+                compute=[1]
+                nrep=[1]
+                ngroup=[8]
+                read covariates from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 0/18280  (idx,y) = (0, 0)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 1/18280  (idx,y) = (1, 1)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 2/18280  (idx,y) = (2, 2)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 3/18280  (idx,y) = (3, 3)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 4/18280  (idx,y) = (4, 4)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 5/18280  (idx,y) = (5, 5)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 6/18280  (idx,y) = (6, 6)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 7/18280  (idx,y) = (7, 7)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 8/18280  (idx,y) = (8, 8)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3465b483be9] 9/18280  (idx,y) = (9, 9)
+                read weights from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18]
+                read n=[36560] entries from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18]
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 0/18280  (idx,y) = (0, 8.3102)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 1/18280  (idx,y) = (1, 7.86852)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 2/18280  (idx,y) = (2, 5.06733)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 3/18280  (idx,y) = (3, 8.09658)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 4/18280  (idx,y) = (4, 7.16064)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 5/18280  (idx,y) = (5, 7.43846)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 6/18280  (idx,y) = (6, 6.53395)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 7/18280  (idx,y) = (7, 7.46485)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 8/18280  (idx,y) = (8, 6.74974)
+                file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file346683c5a18] 9/18280  (idx,y) = (9, 6.88814)
+                read graph from file=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3462f4b35ce]
+                file for locations=[/tmp/RtmpfbTuiz/file3467ae97ab3/data.files/file3464d91c8bb]
+                        nlocations=[2285]
+                        locations[0]=[1]
+                        locations[1]=[2]
+                        locations[2]=[3]
+                        locations[3]=[4]
+                        locations[4]=[5]
+                        locations[5]=[6]
+                        locations[6]=[7]
+                        locations[7]=[8]
+                        locations[8]=[9]
+                        locations[9]=[10]
+                initialise log_precision[0]
+                fixed=[0]
+                adjust.for.con.comp[1]
+                scale.model[1]
+                connected component[0] size[2285] scale[0.738422]
+                scale.model: prec_scale[0.738422]
+                rank-deficiency is *defined* [1]
+                output:
+                        summary=[1]
+                        return.marginals=[1]
+                        nquantiles=[3]  [ 0.025 0.5 0.975 ]
+                        ncdf=[0]  [ ]
+                group.model = ar1
+                group.graph = <NONE>
+                group.cyclic = False
+                group.order = -1
+                initialise group_rho_intern[2]
+                group.fixed=[0]
+                GROUP.PRIOR->name=[normal]
+                hyperid=[41001|TravelTime.id]
+                GROUP.PRIOR->from_theta=[function (x) <<NEWLINE>>2 * exp(x)/(1 + exp(x)) - 1]
+                GROUP.PRIOR->to_theta = [function (x) <<NEWLINE>>log((1 + x)/(1 - x))]
+                GROUP.PRIOR->GROUP.PARAMETERS=[0, 0.15]
+        Index table: number of entries[12], total length[219360]
+                tag                            start-index     length
+                Predictor                               0      18280
+                county.id                           18280      18280
+                urbanization.id                     36560      18280
+                laborPR.id                          54840      18280
+                lnFAI.id                            73120      18280
+                lnRevn.id                           91400      18280
+                lnExp.id                           109680      18280
+                lnDeposit.id                       127960      18280
+                lnStudSec.id                       146240      18280
+                lnPopDen.id                        164520      18280
+                Indstr.id                          182800      18280
+                TravelTime.id                      201080      18280
+        parse section=[15] name=[INLA.Parameters] type=[INLA]
+        inla_parse_INLA...
+                section[INLA.Parameters]
+                        lincomb.derived.only = [Yes]
+                        lincomb.derived.correlation.matrix = [No]
+                global_node.factor = 2.000
+                global_node.degree = 2147483647
+                reordering = -1
+                constr.marginal.diagonal = 1.49e-08
+Contents of ai_param 0x7f2f116c31c0
+        Optimiser: DEFAULT METHOD
+                Option for GSL-BFGS2: tol  = 0.1
+                Option for GSL-BFGS2: step_size = 1
+                Option for GSL-BFGS2: epsx = 0.005
+                Option for GSL-BFGS2: epsf = 0.000353553
+                Option for GSL-BFGS2: epsg = 0.005
+                Restart: 0
+                Optimise: try to be smart: Yes
+                Optimise: use directions: Yes
+                Mode known: No
+        Gaussian approximation:
+                tolerance_func = 0.0005
+                tolerance_step = 0.0005
+                optpar_fp = 0
+                optpar_nr_step_factor = -0.1
+        Gaussian data: Yes
+        Strategy:       Use an adaptive strategy (max=10)
+        Fast mode:      On
+        Use linear approximation to log(|Q +c|)? Yes
+                Method:  Compute the derivative exact
+        Parameters for improved approximations
+                Number of points evaluate:       9
+                Step length to compute derivatives numerically:  0.000100002
+                Stencil to compute derivatives numerically:      5
+                Cutoff value to construct local neigborhood:     0.0001
+        Log calculations:        On
+        Log calculated marginal for the hyperparameters:         On
+        Integration strategy:    Use only the modal configuration (EMPIRICAL_BAYES)
+                f0 (CCD only):   1.100
+                dz (GRID only):  0.750
+                Adjust weights (GRID only):      On
+                Difference in log-density limit (GRID only):     6.000
+                Skip configurations with (presumed) small density (GRID only):   On
+        Gradient is computed using Central difference with step-length 0.005000
+        Hessian is computed using Central difference with step-length 0.070711
+        Hessian matrix is forced to be a diagonal matrix? [No]
+        Compute effective number of parameters? [Yes]
+        Perform a Monte Carlo error-test? [No]
+        Interpolator [Auto]
+        CPO required diff in log-density [3]
+        Stupid search mode:
+                Status     [On]
+                Max iter   [1000]
+                Factor     [1.05]
+        Numerical integration of hyperparameters:
+                Maximum number of function evaluations [100000]
+                Relative error ....................... [1e-05]
+                Absolute error ....................... [1e-06]
+        To stabilise the numerical optimisation:
+                Minimum value of the -Hessian [0]
+                Strategy for the linear term [Keep]
+        CPO manual calculation[No]
+        VB-correction is [Disabled]
+        Laplace-correction is Disabled.
+
+inla_build: check for unused entries in[/tmp/RtmpfbTuiz/file3467ae97ab3/Model.ini]
+inla_INLA...
+        Sparse-matrix library... = [pardiso]
+        OpenMP strategy......... = [pardiso]
+        num.threads............. = [25:1]
+        blas.num.threads........ = [1]
+        Density-strategy........ = [High]
+        Size of graph........... = [219360]
+        Number of constraints... = [8]
+        List of hyperparameters:
+                theta[0] = [Log precision for the Gaussian observations]
+                theta[1] = [Log precision for county.id]
+                theta[2] = [Group rho_intern for county.id]
+                theta[3] = [Log precision for urbanization.id]
+                theta[4] = [Group rho_intern for urbanization.id]
+                theta[5] = [Log precision for laborPR.id]
+                theta[6] = [Group rho_intern for laborPR.id]
+                theta[7] = [Log precision for lnFAI.id]
+                theta[8] = [Group rho_intern for lnFAI.id]
+                theta[9] = [Log precision for lnRevn.id]
+                theta[10] = [Group rho_intern for lnRevn.id]
+                theta[11] = [Log precision for lnExp.id]
+                theta[12] = [Group rho_intern for lnExp.id]
+                theta[13] = [Log precision for lnDeposit.id]
+                theta[14] = [Group rho_intern for lnDeposit.id]
+                theta[15] = [Log precision for lnStudSec.id]
+                theta[16] = [Group rho_intern for lnStudSec.id]
+                theta[17] = [Log precision for lnPopDen.id]
+                theta[18] = [Group rho_intern for lnPopDen.id]
+                theta[19] = [Log precision for Indstr.id]
+                theta[20] = [Group rho_intern for Indstr.id]
+                theta[21] = [Log precision for TravelTime.id]
+                theta[22] = [Group rho_intern for TravelTime.id]
+Optimise using DEFAULT METHOD
+Smart optimise part I: estimate gradient using forward differences
+maxldens= -169551.619 fn=  1 theta= 4.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.005 0.000 2.000  range=[-0.07 14.34]
+maxldens= -169551.255 fn=  2 theta= 4.000 0.005 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000  range=[-0.07 14.34]
+maxldens= -169549.705 fn=  3 theta= 4.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.005  range=[-0.07 14.34]
+maxldens= -169544.957 fn=  4 theta= 4.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.005 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000  range=[-0.07 14.34]
+maxldens= -169541.548 fn= 12 theta= 4.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.005 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000  range=[-0.07 14.34]
+maxldens= -169541.309 fn= 16 theta= 4.000 0.000 2.000 0.000 2.000 0.000 2.000 0.005 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000 0.000 2.000  range=[-0.07 14.34]
+maxldens= -165062.601 fn= 25 theta= 4.001 0.018 2.004 0.015 2.002 0.015 2.002 0.452 2.293 0.282 2.180 0.367 2.237 0.441 2.286 0.238 2.150 0.122 2.070 0.015 2.002 0.154 2.085  range=[-0.10 14.34]
+maxldens= -165058.177 fn= 26 theta= 4.001 0.018 2.004 0.015 2.002 0.015 2.002 0.452 2.293 0.282 2.180 0.367 2.237 0.441 2.286 0.238 2.150 0.122 2.070 0.015 2.002 0.159 2.085  range=[-0.10 14.34]
+maxldens= -165056.411 fn= 30 theta= 4.001 0.018 2.004 0.015 2.002 0.015 2.002 0.452 2.293 0.282 2.180 0.367 2.237 0.441 2.286 0.243 2.150 0.122 2.070 0.015 2.002 0.154 2.085  range=[-0.10 14.34]
+maxldens= -165055.663 fn= 31 theta= 4.001 0.018 2.004 0.015 2.002 0.015 2.002 0.452 2.293 0.287 2.180 0.367 2.237 0.441 2.286 0.238 2.150 0.122 2.070 0.015 2.002 0.154 2.085  range=[-0.10 14.34]
+maxldens= -165053.962 fn= 32 theta= 4.001 0.018 2.004 0.015 2.002 0.015 2.002 0.452 2.293 0.282 2.180 0.367 2.237 0.446 2.286 0.238 2.150 0.122 2.070 0.015 2.002 0.154 2.085  range=[-0.10 14.34]
+maxldens= -165053.870 fn= 44 theta= 4.001 0.018 2.004 0.015 2.002 0.015 2.002 0.457 2.293 0.282 2.180 0.367 2.237 0.441 2.286 0.238 2.150 0.122 2.070 0.015 2.002 0.154 2.085  range=[-0.10 14.34]
+maxldens= -144583.719 fn= 50 theta= 4.010 0.120 2.025 0.100 2.012 0.104 2.014 3.044 3.972 1.902 3.216 2.473 3.597 2.974 3.927 1.602 3.011 0.822 2.474 0.102 2.013 1.038 2.576  range=[-0.35 14.34]
+maxldens= -144577.525 fn= 51 theta= 4.010 0.120 2.025 0.100 2.012 0.104 2.014 3.044 3.972 1.907 3.216 2.473 3.597 2.974 3.927 1.602 3.011 0.822 2.474 0.102 2.013 1.038 2.576  range=[-0.35 14.34]
+maxldens= -144573.437 fn= 53 theta= 4.010 0.120 2.025 0.100 2.012 0.104 2.014 3.044 3.972 1.902 3.216 2.473 3.597 2.974 3.927 1.602 3.011 0.822 2.474 0.102 2.013 1.043 2.576  range=[-0.35 14.34]
+maxldens= -144572.720 fn= 72 theta= 4.010 0.120 2.025 0.100 2.012 0.104 2.014 3.044 3.972 1.902 3.216 2.473 3.597 2.974 3.927 1.602 3.011 0.827 2.474 0.102 2.013 1.038 2.576  range=[-0.35 14.34]
+maxldens= -126949.562 fn= 75 theta= 4.024 0.288 2.059 0.240 2.028 0.249 2.034 7.290 6.722 4.556 4.912 5.922 5.825 7.122 6.614 3.836 4.422 1.968 3.136 0.245 2.032 2.487 3.379  range=[-1.37 14.33]
+maxldens= -126949.062 fn= 76 theta= 4.024 0.288 2.059 0.240 2.028 0.249 2.034 7.290 6.722 4.556 4.917 5.922 5.825 7.122 6.614 3.836 4.422 1.968 3.136 0.245 2.032 2.487 3.379  range=[-1.37 14.33]
+maxldens= -126947.105 fn= 79 theta= 4.024 0.288 2.059 0.240 2.028 0.249 2.034 7.290 6.722 4.556 4.912 5.922 5.825 7.122 6.614 3.841 4.422 1.968 3.136 0.245 2.032 2.487 3.379  range=[-1.37 14.33]
+maxldens= -126944.549 fn= 82 theta= 4.024 0.288 2.064 0.240 2.028 0.249 2.034 7.290 6.722 4.556 4.912 5.922 5.825 7.122 6.614 3.836 4.422 1.968 3.136 0.245 2.032 2.487 3.379  range=[-1.37 14.33]
+maxldens= -126943.516 fn= 86 theta= 4.024 0.288 2.059 0.240 2.028 0.249 2.034 7.290 6.722 4.556 4.912 5.922 5.825 7.122 6.614 3.836 4.422 1.968 3.136 0.245 2.032 2.487 3.384  range=[-1.37 14.33]
+maxldens= -126940.884 fn= 89 theta= 4.024 0.288 2.059 0.240 2.028 0.249 2.034 7.290 6.722 4.556 4.912 5.922 5.825 7.122 6.614 3.836 4.422 1.968 3.136 0.245 2.032 2.492 3.379  range=[-1.37 14.33]
+maxldens= -126938.783 fn= 92 theta= 4.024 0.288 2.059 0.240 2.028 0.249 2.034 7.290 6.722 4.556 4.912 5.922 5.825 7.122 6.614 3.836 4.422 1.968 3.141 0.245 2.032 2.487 3.379  range=[-1.37 14.33]
+maxldens= -126935.701 fn= 98 theta= 4.024 0.288 2.059 0.240 2.028 0.249 2.034 7.290 6.722 4.556 4.912 5.922 5.825 7.122 6.614 3.836 4.422 1.973 3.136 0.245 2.032 2.487 3.379  range=[-1.37 14.33]
+
+*** PARDISO ERROR(0): not pos.def matrix: 14 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+maxldens= 2343997.843 fn=100 theta= 4.149 1.796 2.366 1.499 2.177 1.556 2.212 45.507 31.477 28.438 20.177 36.967 25.877 44.458 30.802 23.945 17.121 12.284 9.091 1.531 2.197 15.524 10.607  range=[-3.06 14.11]
+
+*** PARDISO ERROR(0): not pos.def matrix: 13 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 15 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 13 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 14 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 13 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 15 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 14 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 18 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 13 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 14 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 19 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+maxldens= 2346266.439 fn=101 theta= 4.149 1.796 2.366 1.499 2.177 1.556 2.212 45.507 31.477 28.438 20.177 36.967 25.877 44.458 30.802 23.945 17.126 12.284 9.091 1.531 2.197 15.524 10.607  range=[-2.86 14.10]
+
+*** PARDISO ERROR(0): not pos.def matrix: 15 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 14 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 13 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 15 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 10 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 14 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 13 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 13 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 19 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 13 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 19 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 14 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+*** PARDISO ERROR(0): not pos.def matrix: 13 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+        file: smtp-pardiso.c  d666655028aabbc8423055862b76f164b333d4f1 - Sun Nov 29 13:43:31 2020 +0300
+        Function: GMRFLib_Q2csr(), Line: 259, Thread: 0
+        Variable evaluates to NAN or INF. idx=(1209435,-1). I will try to fix it...
+        file: smtp-pardiso.c  d666655028aabbc8423055862b76f164b333d4f1 - Sun Nov 29 13:43:31 2020 +0300
+        Function: GMRFLib_Q2csr(), Line: 259, Thread: 0
+        Variable evaluates to NAN or INF. idx=(1209435,-1). I will try to fix it...
+        file: smtp-pardiso.c  d666655028aabbc8423055862b76f164b333d4f1 - Sun Nov 29 13:43:31 2020 +0300
+        Function: GMRFLib_Q2csr(), Line: 259, Thread: 0
+        Variable evaluates to NAN or INF. idx=(1209435,-1). I will try to fix it...
+*** PARDISO ERROR(0): not pos.def matrix: 184422 eigenvalues are negative.
+*** PARDISO ERROR: I will try to work around the problem...
+
+
+
+        GMRFLib version 3.0-0-snapshot, has recived error no [17]
+        Reason    : Constraints or its covariance matrix is singular
+        Function  : GMRFLib_init_problem_store
+        File      : problem-setup.c
+        Line      : 927
+        GitID     : file: problem-setup.c  d666655028aabbc8423055862b76f164b333d4f1 - Sun Nov 29 13:43:31 2020 +0300
+
+Aborted (core dumped)
+Error in inla.inlaprogram.has.crashed() :
+  The inla-program exited with an error. Unless you interupted it yourself, please rerun with verbose=TRUE and check the output carefully.
+  If this does not help, please contact the developers at <help@r-inla.org>.
+>
